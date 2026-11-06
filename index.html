@@ -83,7 +83,7 @@ const clubs = [
 ];
 let data = {profile:{name:&#x27;Disha&#x27;,city:&#x27;Ahmedabad&#x27;},requests:{},watch:{},reviews:{},read:{0:true},messages:{},connections:{},started:false,alerts:true};
 try { const saved = localStorage.getItem(&#x27;at-the-table-v1&#x27;); if(saved) data = JSON.parse(saved); } catch {}
-let page=data.started?&#x27;Browse&#x27;:&#x27;role&#x27;, step=0, tab=&#x27;Upcoming&#x27;, current=0, sort=&#x27;Recommended&#x27;, setupReturn=&#x27;&#x27;, plus=&#x27;&#x27;, timer, reviewRating=5;
+let page=&#x27;role&#x27;, step=0, tab=&#x27;Upcoming&#x27;, current=0, sort=&#x27;Recommended&#x27;, setupReturn=&#x27;&#x27;, plus=&#x27;&#x27;, timer, reviewRating=5;
 const save=()=&gt;{try{localStorage.setItem(&#x27;at-the-table-v1&#x27;,JSON.stringify(data));}catch{}};
 const esc=v=&gt;String(v??&#x27;&#x27;).replace(/[&amp;&lt;&gt;&quot;&#x27;]/g,c=&gt;({&#x27;&amp;&#x27;:&#x27;&amp;amp;&#x27;,&#x27;&lt;&#x27;:&#x27;&amp;lt;&#x27;,&#x27;&gt;&#x27;:&#x27;&amp;gt;&#x27;,&#x27;&quot;&#x27;:&#x27;&amp;quot;&#x27;,&quot;&#x27;&quot;:&#x27;&amp;#39;&#x27;}[c]));
 const btn=(label,action,style=&#x27;button&#x27;)=&gt;&#x27;&lt;button type=&quot;button&quot; class=&quot;&#x27;+style+&#x27;&quot; data-action=&quot;&#x27;+action+&#x27;&quot;&gt;&#x27;+label+&#x27;&lt;/button&gt;&#x27;;
